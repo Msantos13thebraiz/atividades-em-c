@@ -1,23 +1,23 @@
 #include <stdio.h>
 
 int main() {
-    char estado;
+    char civil;
     
     printf("Digite a inicial do estado civil (S/C/D/V): ");
-    scanf(" %c", &estado);
+    scanf(" %c", &civel);
     
     // Convertendo para maiúsculo
-    if (estado >= 'a' && estado <= 'z') {
+    if (estado >= 'a' && civil <= 'z') {
         estado = estado - 32;
     }
     
-    if (estado == 'S') {
+    if (civil == 'S') {
         printf("Solteiro\n");
-    } else if (estado == 'C') {
+    } else if (civil == 'C') {
         printf("Casado\n");
-    } else if (estado == 'D') {
+    } else if (civil == 'D') {
         printf("Divorciado\n");
-    } else if (estado == 'V') {
+    } else if (civil == 'V') {
         printf("Viúvo\n");
     } else {
         printf("Opção inválida!\n");
