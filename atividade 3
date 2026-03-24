@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main() {
+    char estado;
+    
+    printf("Digite a inicial do estado civil (S/C/D/V): ");
+    scanf(" %c", &estado);
+    
+    // Convertendo para maiúsculo
+    if (estado >= 'a' && estado <= 'z') {
+        estado = estado - 32;
+    }
+    
+    if (estado == 'S') {
+        printf("Solteiro\n");
+    } else if (estado == 'C') {
+        printf("Casado\n");
+    } else if (estado == 'D') {
+        printf("Divorciado\n");
+    } else if (estado == 'V') {
+        printf("Viúvo\n");
+    } else {
+        printf("Opção inválida!\n");
+    }
+    
+    return 0;
+}
