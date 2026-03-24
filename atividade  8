@@ -1,0 +1,54 @@
+#include <stdio.h>
+
+int main() {
+    char genero;
+    float peso, altura, imc;
+    
+    printf("Digite o gênero (M/F): ");
+    scanf(" %c", &genero);
+    printf("Digite o peso em kg (ex: 60.5): ");
+    scanf("%f", &peso);
+    printf("Digite a altura em metros (ex: 1.54): ");
+    scanf("%f", &altura);
+    
+    // Calcular IMC
+    imc = peso / (altura * altura);
+    
+    printf("\nIMC calculado: %.2f\n", imc);
+    
+    // Converter para maiúsculo
+    if (genero >= 'a' && genero <= 'z') {
+        genero = genero - 32;
+    }
+    
+    // Classificar conforme gênero
+    if (genero == 'M') {
+        if (imc < 20) {
+            printf("Classificação: Abaixo do peso\n");
+        } else if (imc <= 24.9) {
+            printf("Classificação: Normal\n");
+        } else if (imc <= 29.9) {
+            printf("Classificação: Obesidade leve\n");
+        } else if (imc <= 39.9) {
+            printf("Classificação: Obesidade moderada\n");
+        } else {
+            printf("Classificação: Obesidade mórbida\n");
+        }
+    } else if (genero == 'F') {
+        if (imc < 19) {
+            printf("Classificação: Abaixo do peso\n");
+        } else if (imc <= 23.9) {
+            printf("Classificação: Normal\n");
+        } else if (imc <= 28.9) {
+            printf("Classificação: Obesidade leve\n");
+        } else if (imc <= 38.9) {
+            printf("Classificação: Obesidade moderada\n");
+        } else {
+            printf("Classificação: Obesidade mórbida\n");
+        }
+    } else {
+        printf("Gênero inválido!\n");
+    }
+    
+    return 0;
+}
